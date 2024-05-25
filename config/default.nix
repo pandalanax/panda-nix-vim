@@ -2,7 +2,7 @@
   # Import all your configuration modules here
   imports = [
     ./colors.nix
-    ./plugins.nix
+    ./oil.nix
     ./options.nix
 
     ./auto-pair.nix

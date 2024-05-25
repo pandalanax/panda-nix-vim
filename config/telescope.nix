@@ -11,7 +11,7 @@
     };
     extensions.fzf-native = {enable = true;};
   };
-  extraPackages = with pkgs; [
+  extraPlugins = with pkgs; [
     vimPlugins.nvim-web-devicons
   ];
 }
