@@ -29,7 +29,7 @@
         nil_ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
-        svelte = {enabe = true;};
+        svelte = {enable = true;};
         gopls = {enable = true;};
         tsserver = {enable = false;};
         rust-analyzer = {
