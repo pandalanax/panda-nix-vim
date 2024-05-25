@@ -21,6 +21,7 @@
         };
       };
 
+      # https://github.com/nix-community/nixvim/blob/main/plugins/lsp/default.nix
       servers = {
         eslint = {enable = true;};
         html = {enable = true;};
@@ -28,6 +29,7 @@
         nil_ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
+        svelte = {enabe = true;};
         gopls = {enable = true;};
         tsserver = {enable = false;};
         rust-analyzer = {
