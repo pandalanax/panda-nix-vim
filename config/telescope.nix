@@ -1,0 +1,17 @@
+{pkgs, ...}: {
+  plugins.telescope = {
+    enable = true;
+    keymaps = {
+      "<leader>sg" = "live_grep";
+      "<leader>sf" = "find_files";
+      #"<C-p>" = {
+      #  action = "git_files";
+      #  desc = "Telescope Git Files";
+      #};
+    };
+    extensions.fzf-native = {enable = true;};
+  };
+  extraPackages = with pkgs; [
+    vimPlugins.nvim-web-devicons
+  ];
+}
