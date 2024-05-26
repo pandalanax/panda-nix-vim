@@ -19,3 +19,7 @@ If you add a new configuration file, remember to add it to the
 ```
 nix run github:pandalanax/panda-nix-vim
 ```
+
+## Credits
+
+See [nixvim](https://github.com/nix-community/nixvim).
