@@ -1,5 +1,22 @@
-{
+{pkgs, ...}: {
+  extraPlugins = [pkgs.vimPlugins.nvim-surround];
   extraConfigLua = ''
+    local surround = require("nvim-surround")
+    surround.setup({
+      keymaps = {
+        insert = "<C-g>z",
+        insert_line = "gC-ggZ",
+        normal = "z",
+        normal_cur = "Z",
+        normal_line = "gzgz",
+        normal_cur_line = "gZgZ",
+        visual = "z",
+        visual_line = "Z",
+        delete = "dz",
+        change = "cz",
+      },
+    })
+
     local augroup = vim.api.nvim_create_augroup
     local autocmd = vim.api.nvim_create_autocmd
     local yank_group = augroup("HighlightYank", {})
