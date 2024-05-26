@@ -22,5 +22,6 @@
 
     swapfile = false;
     wrap = false;
+    cursorline = true;
   };
 }

@@ -19,5 +19,6 @@
     ./extraConfig.nix
     ./surround.nix
     ./gitsigns.nix
+    ./alpha.nix
   ];
 }
