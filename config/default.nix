@@ -20,5 +20,6 @@
     ./surround.nix
     ./gitsigns.nix
     ./alpha.nix
+    ./keymaps.nix
   ];
 }
