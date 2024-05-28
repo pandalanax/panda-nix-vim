@@ -79,11 +79,11 @@
             winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
             scrollbar = true;
             sidePadding = 0;
-            #border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
+            border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
           };
 
           documentation = {
-            #border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
+            border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
             winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
           };
         };
