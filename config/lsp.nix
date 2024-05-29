@@ -15,7 +15,7 @@
           "gd" = "definition";
           "gt" = "type_definition";
           "gi" = "implementation";
-          #"K" = "hover";
+          "K" = "hover";
           "<leader>ca" = "code_action";
           "<leader>rn" = "rename";
         };
@@ -46,7 +46,7 @@
     };
   };
   plugins.lspsaga = {
-    enable = true;
+    enable = false;
     beacon = {
       enable = true;
     };
@@ -211,7 +211,7 @@
 
     {
       mode = "n";
-      key = "dn";
+      key = "[d";
       action = "<cmd>Lspsaga diagnostic_jump_next<CR>";
       options = {
         desc = "Next Diagnostic";
@@ -221,7 +221,7 @@
 
     {
       mode = "n";
-      key = "dp";
+      key = "]d";
       action = "<cmd>Lspsaga diagnostic_jump_prev<CR>";
       options = {
         desc = "Previous Diagnostic";
