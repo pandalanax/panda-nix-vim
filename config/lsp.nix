@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   plugins = {
     lsp-format = {enable = true;};
     lsp = {
@@ -34,19 +34,21 @@
         svelte = {enable = true;};
         gopls = {enable = true;};
         tsserver = {enable = false;};
-        rust-analyzer = {
-          enable = true;
-          installCargo = true;
-          installRustc = true;
-        };
         yamlls = {
           enable = true;
         };
       };
     };
   };
+  plugins.rustaceanvim = {
+    enable = true;
+  };
+  extraPackages = with pkgs; [
+    rustc
+    cargo
+  ];
   plugins.lspsaga = {
-    enable = false;
+    enable = true;
     beacon = {
       enable = true;
     };
