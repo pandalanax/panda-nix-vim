@@ -32,7 +32,7 @@
         eslint = {enable = true;};
         html = {enable = true;};
         lua-ls = {enable = true;};
-        nil_ls = {enable = true;};
+        nil-ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
         lemminx = {enable = true;};
@@ -52,6 +52,7 @@
   extraPackages = with pkgs; [
     rustc
     cargo
+    rustPackages.clippy
   ];
   plugins.lspsaga = {
     enable = true;
