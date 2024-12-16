@@ -30,16 +30,16 @@
 
     # yank to system clipboard
     {
-      mode = "n";
+      mode = "";
       key = "<leader>y";
       options.silent = true;
-      action = ''[["+y]]'';
+      action = ''[["*y]]'';
     }
     {
       mode = "v";
       key = "<leader>y";
       options.silent = true;
-      action = ''[["+y]]'';
+      action = ''"+y'';
     }
     #half page jump
     {
