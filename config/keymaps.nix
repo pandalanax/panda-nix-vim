@@ -30,10 +30,10 @@
 
     # yank to system clipboard
     {
-      mode = "";
+      mode = "n";
       key = "<leader>y";
       options.silent = true;
-      action = ''[["*y]]'';
+      action = ''"+y'';
     }
     {
       mode = "v";
