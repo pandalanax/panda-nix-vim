@@ -21,5 +21,7 @@
     ./gitsigns.nix
     ./alpha.nix
     ./keymaps.nix
+
+    ./dap.nix
   ];
 }
