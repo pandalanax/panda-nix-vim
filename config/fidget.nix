@@ -1,4 +1,8 @@
 {
+  config,
+  lib,
+  ...
+}: {
   plugins.fidget = {
     enable = true;
     logger = {
@@ -32,7 +36,7 @@
         doneTtl = 3; # How long a message should persist after completion
         doneIcon = "✔"; # Icon shown when all LSP progress tasks are complete
         doneStyle = "Constant"; # Highlight group for completed LSP tasks
-        progressTtl = "math.huge"; # How long a message should persist when in progress
+        progressTtl = lib.nixvim.mkRaw "math.huge"; # How long a message should persist when in progress
         progressIcon = {
           pattern = "dots";
           period = 1;
@@ -42,13 +46,13 @@
         iconStyle = "Question"; # Highlight group for group icons
         priority = 30; # Ordering priority for LSP notification group
         skipHistory = true; # Whether progress notifications should be omitted from history
-        formatMessage = ''
+        formatMessage = lib.nixvim.mkRaw ''
           require ("fidget.progress.display").default_format_message
         ''; # How to format a progress message
-        formatAnnote = ''
+        formatAnnote = lib.nixvim.mkRaw ''
           function (msg) return msg.title end
         ''; # How to format a progress annotation
-        formatGroupName = ''
+        formatGroupName = lib.nixvim.mkRaw ''
           function (group) return tostring (group) end
         ''; # How to format a progress notification group's name
         overrides = {
@@ -63,16 +67,14 @@
       filter = "info"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
       historySize = 128; # Number of removed messages to retain in history
       overrideVimNotify = true;
-      redirect = ''
+      redirect = lib.nixvim.mkRaw ''
         function(msg, level, opts)
           if opts and opts.on_open then
             return require("fidget.integration.nvim-notify").delegate(msg, level, opts)
           end
         end
       '';
-      configs = {
-        default = "require('fidget.notification').default_config";
-      };
+      configs.default = lib.nixvim.mkRaw "require('fidget.notification').default_config";
 
       window = {
         normalHl = "Comment";
