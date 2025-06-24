@@ -14,7 +14,7 @@
     ./comment.nix
     ./conform.nix
     ./lsp.nix
-    ./tmux-navigator.nix
+    #./tmux-navigator.nix
     ./fidget.nix
     ./extraConfig.nix
     ./surround.nix

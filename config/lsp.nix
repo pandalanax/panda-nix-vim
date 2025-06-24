@@ -1,9 +1,9 @@
 {pkgs, ...}: {
+  diagnostic.settings.virtual_lines.only_current_line = true;
   plugins = {
     lsp-format = {enable = true;};
     lsp-lines = {
       enable = true;
-      currentLine = true;
     };
     lsp = {
       enable = true;
@@ -33,7 +33,7 @@
         html = {enable = true;};
         lua_ls = {enable = true;};
         nil_ls = {enable = true;};
-        marksman = {enable = true;};
+        #marksman = {enable = true;};
         pyright = {enable = true;};
         lemminx = {enable = true;};
         svelte = {enable = true;};

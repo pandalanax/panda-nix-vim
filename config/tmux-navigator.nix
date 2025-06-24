@@ -1,10 +1,10 @@
-{
+{pkgs, ...}: {
   plugins = {
     tmux-navigator = {
       enable = true;
 
       settings = {
-        no_wrap = true;
+        no_wrap = 1;
         disable_when_zoomed = true;
       };
     };
