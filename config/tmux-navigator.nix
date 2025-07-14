@@ -4,8 +4,8 @@
       enable = true;
 
       settings = {
-        no_wrap = true;
-        disable_when_zoomed = true;
+        no_wrap = 1;
+        disable_when_zoomed = 1;
       };
     };
   };

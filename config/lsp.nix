@@ -1,10 +1,11 @@
 {pkgs, ...}: {
+  diagnostic.settings.virtual_lines.only_current_line = true;
   plugins = {
-    lsp-format = {enable = true;};
-    lsp-lines = {
-      enable = true;
-      currentLine = true;
-    };
+    lsp-format.enable = true;
+    # lsp-lines = {
+    # enable = true;
+    # currentLine = true;
+    # };
     lsp = {
       enable = true;
       keymaps = {
