@@ -21,5 +21,6 @@
     ./gitsigns.nix
     ./alpha.nix
     ./keymaps.nix
+    ./telescope-project.nix
   ];
 }
